@@ -17,8 +17,8 @@ Otherwise, you will need the following libraries:
 ## Azure IoT Connection Strings with IoT Central
 
 This sample DOES NOT include the code necessary to use the IoT Hub Device provisioning
-service. Therefore, you must manually convert the values from IoT Central into a Device 
-Connection String using the tool available here:
+service, which is used by Azure IoT Central. Therefore you must manually convert the values
+from IoT Central into a Device Connection String using the tool available here:
 
 https://github.com/Azure/dps-keygen
 
