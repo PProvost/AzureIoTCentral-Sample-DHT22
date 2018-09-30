@@ -120,6 +120,7 @@ void sendTelemetry()
     root["humidity"] = newValues.humidity;
     root["heatIndex"] = heatIndex;
     root["dewPoint"] = dewPoint;
+    root["rssi"] = WiFi.RSSI();
 
     if (comfortStatus != lastComfortStatus)
     {
@@ -239,6 +240,8 @@ void setup()
   Serial.println("Starting connecting WiFi.");
   delay(10);
   WiFi.begin(ssid, password);
+  int8_t rssi = WiFi.RSSI();
+
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
